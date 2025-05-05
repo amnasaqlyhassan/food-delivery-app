@@ -15,4 +15,4 @@ export const userRoute = "https://undefined-variables-production.up.railway.app/
 export const menuRoute = "https://undefined-variables-production.up.railway.app/api/menu-items"
 export const orderRoute = "https://undefined-variables-production.up.railway.app/api/orders"
 export const orderHistoryRoute = "https://undefined-variables-production.up.railway.app/api/orders/user/history"
-export const signupRoute = "https://undefined-variables-production.up.railway.app/api/signup"
+export const signupRoute = "https://undefined-variables-production.up.railway.app/api/users/signup"
