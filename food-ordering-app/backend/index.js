@@ -36,8 +36,7 @@ io.on("connection", (socket) => {
 // Middleware
 app.use(
   cors({
-    origin: "*", // Allow frontend requests
-    credentials: true, // Allow cookies & authentication headers
+    origin: "*"
   })
 );
 
