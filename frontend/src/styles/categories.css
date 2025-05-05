@@ -1,0 +1,353 @@
+:root {
+  --primary-color: #ff5722;
+  --text-color: #333;
+  --background-color: #fff;
+  --card-background: #fff;
+  --border-color: #eee;
+  --filter-active-bg: rgba(255, 87, 34, 0.1);
+  --filter-active-text: #ff5722;
+  --filter-inactive-bg: #f5f5f5;
+  --filter-inactive-text: #666;
+  --button: #ffffff;
+}
+
+.dark-mode {
+  --text-color: #f5f5f5;
+  --background-color: #121212;
+  --card-background: #1e1e1e;
+  --border-color: #333;
+  --filter-inactive-bg: #2a2a2a;
+  --filter-inactive-text: #ccc;
+  --button: #ffffff;
+}
+
+.categories-detail {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  min-height: 50vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-left: 0.5rem;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.categories-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 100%;
+  flex: 1;
+}
+
+.categories-hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 500px;
+  padding: 1rem;
+  background-color: var(--card-background);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.categories-hero-content {
+  flex: 1;
+}
+
+.categories-hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.categories-view-menu-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.categories-hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.categories-banner-image {
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.categories-filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.categories-filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+  border: none;
+  background-color: var(--filter-inactive-bg);
+  color: var(--filter-inactive-text);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.categories-filter-btn.active {
+  background-color: var(--filter-active-bg);
+  color: var(--filter-active-text);
+}
+
+.categories-filter-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+.categories-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.categories-section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.categories-pagination-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.categories-pagination-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-background);
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.categories-burger-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.categories-burger-eatery {
+  font-size: 0.85rem;
+  color: var(--filter-inactive-text);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.categories-burger-card {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--card-background);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.categories-burger-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.categories-burger-info {
+  flex: 1;
+  margin-right: 1rem;
+}
+
+.categories-burger-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.categories-burger-description {
+  font-size: 0.875rem;
+  color: var(--filter-inactive-text);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.categories-burger-price {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.categories-burger-image-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.categories-burger-image {
+  border-radius: 0.5rem;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.categories-add-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+  position: relative;
+}
+
+.categories-add-btn .categories-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quantity {
+  min-width: 20px;
+  text-align: center;
+}
+
+.categories-popular-restaurants {
+  margin-top: 2rem;
+}
+
+.categories-restaurant-logos {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+
+.categories-restaurant-logo {
+  min-width: 80px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--card-background);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.categories-icon {
+  width: 5%;
+  height: 5%;
+}
+
+/* Add this to your existing CSS file */
+.categories-subtract-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+  position: relative;
+}
+
+.categories-subtract-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.dark-mode .categories-subtract-btn {
+  background-color: #2a2a2a;
+  border-color: #444;
+  color: var(--button);
+}
+
+.dark-mode .categories-subtract-btn:hover {
+  background-color: #3a3a3a;
+}
+
+.categories-subtract-btn svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+@media (max-width: 768px) {
+  .categories-hero-section {
+    flex-direction: column;
+  }
+
+  .categories-hero-image {
+    margin-top: 1rem;
+    justify-content: center;
+  }
+
+  .categories-burger-grid {
+    grid-template-columns: 1fr;
+  }
+}

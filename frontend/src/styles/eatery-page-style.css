@@ -1,0 +1,907 @@
+/* Root Variables for Theming */
+:root {
+    --eatery-brand-primary: #fd7825;
+    --eatery-brand-secondary: #ff9f50;
+    --eatery-brand-accent: #ffb380;
+    --eatery-theme-dark: #0a0e1a;
+    --eatery-theme-light: #ffffff;
+    --eatery-text-dark: #2d3748;
+    --eatery-text-light: #ffffff;
+    --eatery-text-muted: #718096;
+    --eatery-surface-dark: #1c2233;
+    --eatery-surface-light: #ffffff;
+    --eatery-background-light: #f8f9fa;
+    --eatery-border-light: #e2e8f0;
+    --eatery-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --eatery-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --eatery-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --eatery-radius-sm: 4px;
+    --eatery-radius-md: 8px;
+    --eatery-radius-lg: 12px;
+    --eatery-radius-xl: 16px;
+    --eatery-radius-full: 9999px;
+  }
+  
+  /* Base Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: var(--eatery-background-light);
+    color: var(--eatery-text-dark);
+  }
+  
+  /* Theme Mode Classes */
+  body.eatery-light-theme {
+    background-color: var(--eatery-theme-light);
+    color: var(--eatery-text-dark);
+  }
+  
+  body.eatery-dark-theme {
+    background-color: var(--eatery-theme-dark);
+    color: var(--eatery-text-light);
+  }
+  
+  /* App Container */
+  .eatery-page-wrapper {
+    min-height: 100vh;
+    width: 100vw;
+    transition: all 0.3s ease;
+    overflow-x: hidden;
+  }
+  
+  /* Main Container */
+  .eatery-content-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 120px 24px 40px;
+    overflow-y: visible;
+    min-height: 100vh;
+  }
+  
+  /* Section Headers */
+  .eatery-section-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+  
+  .eatery-content-heading {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--eatery-text-dark);
+    margin-bottom: 8px;
+    position: relative;
+  }
+  
+  .eatery-light-theme .eatery-content-heading {
+    color: var(--eatery-text-dark);
+  }
+  
+  .eatery-dark-theme .eatery-content-heading {
+    color: var(--eatery-text-light);
+  }
+  
+  .eatery-section-divider {
+    width: 60px;
+    height: 4px;
+    background: var(--eatery-brand-primary);
+    border-radius: var(--eatery-radius-full);
+    margin-bottom: 16px;
+  }
+  
+  /* Hero Section */
+  .eatery-banner-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--eatery-radius-lg);
+    overflow: hidden;
+    position: relative;
+    height: min(50vh, 400px);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    margin-top: 1000px;
+    background-color: #e6f0ff;
+    box-shadow: var(--eatery-shadow-lg);
+  }
+  
+  
+  .eatery-banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    width: 80%;
+    max-width: 800px;
+    padding: 32px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: var(--eatery-radius-lg);
+    backdrop-filter: blur(8px);
+    box-shadow: var(--eatery-shadow-md);
+  }
+  
+  .eatery-dark-theme .eatery-banner-content {
+    background-color: rgba(10, 14, 26, 0.85);
+  }
+  
+  /* Hero Title */
+  .eatery-banner-heading {
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, var(--eatery-brand-primary), var(--eatery-brand-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .eatery-banner-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 16px;
+  }
+  
+  .eatery-detail {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    color: var(--eatery-text-dark);
+  }
+  
+  .eatery-dark-theme .eatery-detail {
+    color: var(--eatery-text-light);
+  }
+  
+  .eatery-banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .eatery-banner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    transition: transform 10s ease;
+  }
+  
+  .eatery-banner-section:hover .eatery-banner-image img {
+    transform: scale(1.05);
+  }
+  
+  /* Section Styles */
+  .eatery-menu-category,
+  .eatery-reviews-section {
+    margin-bottom: 60px;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Reviews Section */
+  .eatery-reviews-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .eatery-review-card {
+    background-color: var(--eatery-surface-light);
+    border-radius: var(--eatery-radius-lg);
+    padding: 24px;
+    box-shadow: var(--eatery-shadow-sm);
+    border: 1px solid var(--eatery-border-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .eatery-dark-theme .eatery-review-card {
+    background-color: var(--eatery-surface-dark);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .eatery-review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--eatery-shadow-md);
+  }
+  
+  .eatery-review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .eatery-review-rating {
+    display: flex;
+    gap: 2px;
+  }
+  
+  .eatery-review-author {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--eatery-text-muted);
+  }
+  
+  .eatery-review-text {
+    font-size: 16px;
+    line-height: 1.6;
+    font-style: italic;
+    color: var(--eatery-text-dark);
+  }
+  
+  .eatery-dark-theme .eatery-review-text {
+    color: var(--eatery-text-light);
+  }
+  
+  .eatery-review-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 16px;
+  }
+  
+  .eatery-review-btn {
+    padding: 12px 24px;
+    border-radius: var(--eatery-radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid var(--eatery-brand-primary);
+    background-color: transparent;
+    color: var(--eatery-brand-primary);
+  }
+  
+  .eatery-review-btn:hover {
+    background-color: rgba(253, 120, 37, 0.1);
+  }
+  
+  .eatery-primary-btn {
+    background-color: var(--eatery-brand-primary);
+    color: white;
+  }
+  
+  .eatery-primary-btn:hover {
+    background-color: var(--eatery-brand-secondary);
+    border-color: var(--eatery-brand-secondary);
+  }
+  
+  /* Empty reviews state with image */
+  .eatery-no-reviews-container {
+    grid-column: 1 / -1;
+    border-radius: var(--eatery-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--eatery-shadow-md);
+    margin-bottom: 16px;
+  }
+  
+  .eatery-empty-reviews-image {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+  }
+  
+  .eatery-empty-reviews-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .eatery-empty-reviews-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .eatery-empty-reviews-overlay h3 {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .eatery-no-reviews-container:hover .eatery-empty-reviews-image img {
+    transform: scale(1.05);
+  }
+  
+  .eatery-no-reviews {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 32px;
+    background-color: var(--eatery-surface-light);
+    border-radius: var(--eatery-radius-lg);
+    border: 1px dashed var(--eatery-border-light);
+    color: var(--eatery-text-muted);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .eatery-dark-theme .eatery-no-reviews {
+    background-color: var(--eatery-surface-dark);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .eatery-no-reviews-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--eatery-text-dark);
+  }
+  
+  .eatery-dark-theme .eatery-no-reviews-title {
+    color: var(--eatery-text-light);
+  }
+  
+  .eatery-rating-scale {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 24px;
+  }
+  
+  .eatery-rating-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    gap: 12px;
+  }
+  
+  .eatery-rating-stars {
+    display: flex;
+    min-width: 100px;
+    justify-content: flex-end;
+  }
+  
+  .eatery-rating-stars svg {
+    color: var(--eatery-text-muted);
+  }
+  
+  .eatery-rating-bar {
+    flex: 1;
+    height: 8px;
+    background-color: #e2e8f0;
+    border-radius: var(--eatery-radius-full);
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .eatery-dark-theme .eatery-rating-bar {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .eatery-rating-bar.empty::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: var(--eatery-brand-primary);
+    border-radius: var(--eatery-radius-full);
+  }
+  
+  .eatery-rating-count {
+    min-width: 30px;
+    text-align: left;
+    font-size: 14px;
+    color: var(--eatery-text-muted);
+  }
+  
+  .eatery-no-reviews-text {
+    font-size: 16px;
+    color: var(--eatery-text-muted);
+    margin-bottom: 16px;
+    font-style: italic;
+  }
+  
+  /* Search and Filter */
+  .eatery-search-filter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 40px;
+    background-color: var(--eatery-surface-light);
+    padding: 24px;
+    border-radius: var(--eatery-radius-lg);
+    box-shadow: var(--eatery-shadow-sm);
+    border: 1px solid var(--eatery-border-light);
+  }
+  
+  .eatery-dark-theme .eatery-search-filter-container {
+    background-color: var(--eatery-surface-dark);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .eatery-search-box {
+    display: flex;
+    align-items: center;
+    background-color: var(--eatery-background-light);
+    border-radius: var(--eatery-radius-md);
+    padding: 0 16px;
+    border: 1px solid var(--eatery-border-light);
+  }
+  
+  .eatery-dark-theme .eatery-search-box {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .eatery-search-box svg {
+    color: var(--eatery-text-muted);
+    margin-right: 8px;
+  }
+  
+  .eatery-menu-search {
+    flex: 1;
+    padding: 12px 0;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    color: var(--eatery-text-dark);
+    outline: none;
+  }
+  
+  .eatery-dark-theme .eatery-menu-search {
+    color: var(--eatery-text-light);
+  }
+  
+  .eatery-menu-search::placeholder {
+    color: var(--eatery-text-muted);
+  }
+  
+  .eatery-filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+  }
+  
+  .eatery-filter-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: var(--eatery-text-dark);
+    margin-right: 8px;
+  }
+  
+  .eatery-dark-theme .eatery-filter-label {
+    color: var(--eatery-text-light);
+  }
+  
+  .eatery-filter-btn {
+    padding: 8px 16px;
+    border-radius: var(--eatery-radius-full);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: var(--eatery-background-light);
+    border: 1px solid var(--eatery-border-light);
+    color: var(--eatery-text-dark);
+  }
+  
+  .eatery-dark-theme .eatery-filter-btn {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: var(--eatery-text-light);
+  }
+  
+  .eatery-filter-btn.active {
+    background-color: var(--eatery-brand-primary);
+    border-color: var(--eatery-brand-primary);
+    color: white;
+  }
+  
+  .eatery-filter-btn:hover:not(.active) {
+    border-color: var(--eatery-brand-primary);
+    color: var(--eatery-brand-primary);
+  }
+  
+  /* Menu Grid */
+  .eatery-menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+    width: 100%;
+  }
+  
+  .eatery-menu-item {
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--eatery-radius-lg);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background-color: var(--eatery-surface-light);
+    border: 1px solid var(--eatery-border-light);
+    box-shadow: var(--eatery-shadow-sm);
+  }
+  
+  .eatery-dark-theme .eatery-menu-item {
+    background-color: var(--eatery-surface-dark);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .eatery-menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--eatery-shadow-md);
+  }
+  
+  .eatery-menu-item-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+  }
+  
+  .eatery-menu-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .eatery-menu-item:hover .eatery-menu-item-image img {
+    transform: scale(1.1);
+  }
+  
+  .eatery-menu-item-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .eatery-menu-item-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--eatery-text-dark);
+  }
+  
+  .eatery-dark-theme .eatery-menu-item-name {
+    color: var(--eatery-text-light);
+  }
+  
+  .eatery-menu-item-description {
+    font-size: 14px;
+    color: var(--eatery-text-muted);
+    margin-bottom: 16px;
+    flex: 1;
+    line-height: 1.5;
+  }
+  
+  .eatery-menu-item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+  }
+  
+  .eatery-menu-item-price {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--eatery-text-dark);
+  }
+  
+  .eatery-dark-theme .eatery-menu-item-price {
+    color: var(--eatery-text-light);
+  }
+  
+  /* Quantity control buttons */
+  .eatery-quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .eatery-subtract-button,
+  .eatery-add-button {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    border: 2px solid transparent;
+  }
+  
+  .eatery-subtract-button {
+    background-color: #e2e8f0;
+    border-color: #cbd5e0;
+    color: #4a5568;
+  }
+  
+  .eatery-subtract-button:hover:not(:disabled) {
+    background-color: #cbd5e0;
+  }
+  
+  .eatery-subtract-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .eatery-add-button {
+    background-color: var(--eatery-brand-primary);
+    color: white;
+    border-color: var(--eatery-brand-secondary);
+    box-shadow: var(--eatery-shadow-sm);
+  }
+  
+  .eatery-add-button:hover {
+    background-color: var(--eatery-brand-secondary);
+    transform: scale(1.05);
+  }
+  
+  .eatery-subtract-button svg,
+  .eatery-add-button svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .eatery-quantity {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--eatery-text-dark);
+    min-width: 24px;
+    text-align: center;
+  }
+  
+  .eatery-dark-theme .eatery-quantity {
+    color: var(--eatery-text-light);
+  }
+  
+  /* Screen reader only class */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  
+  /* No results */
+  .eatery-no-results,
+  .eatery-no-items {
+    text-align: center;
+    padding: 40px;
+    background-color: var(--eatery-surface-light);
+    border-radius: var(--eatery-radius-lg);
+    border: 1px dashed var(--eatery-border-light);
+    color: var(--eatery-text-muted);
+  }
+  
+  .eatery-dark-theme .eatery-no-results,
+  .eatery-dark-theme .eatery-no-items {
+    background-color: var(--eatery-surface-dark);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .eatery-reset-btn {
+    margin-top: 16px;
+    padding: 10px 20px;
+    background-color: var(--eatery-brand-primary);
+    color: white;
+    border: none;
+    border-radius: var(--eatery-radius-md);
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+  }
+  
+  .eatery-reset-btn:hover {
+    background-color: var(--eatery-brand-secondary);
+  }
+  
+  /* Error and success messages */
+  .eatery-error-message,
+  .eatery-success-message {
+    padding: 16px;
+    border-radius: var(--eatery-radius-md);
+    margin-bottom: 24px;
+    font-weight: 500;
+    animation: slideIn 0.3s ease-out;
+  }
+  
+  .eatery-error-message {
+    background-color: #fff5f5;
+    color: #e53e3e;
+    border-left: 4px solid #e53e3e;
+  }
+  
+  .eatery-success-message {
+    background-color: #f0fff4;
+    color: #38a169;
+    border-left: 4px solid #38a169;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Loading state */
+  .eatery-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    color: var(--eatery-text-muted);
+  }
+  
+  .eatery-loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top-color: var(--eatery-brand-primary);
+    animation: spin 1s ease-in-out infinite;
+    margin-bottom: 16px;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 1024px) {
+    .eatery-content-container {
+      padding-top: 100px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    .eatery-banner-heading {
+      font-size: 36px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .eatery-content-container {
+      padding-top: 90px;
+    }
+  
+    .eatery-banner-section {
+      height: min(40vh, 300px);
+      margin-bottom: 30px;
+    }
+  
+    .eatery-banner-content {
+      width: 90%;
+      padding: 24px;
+    }
+  
+    .eatery-banner-heading {
+      font-size: 28px;
+    }
+  
+    .eatery-reviews-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .eatery-search-filter-container {
+      padding: 16px;
+    }
+  
+    .eatery-filter-buttons {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .eatery-filter-label {
+      margin-bottom: 8px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .eatery-content-container {
+      padding: 80px 16px 24px;
+    }
+  
+    .eatery-banner-section {
+      height: min(30vh, 200px);
+      margin-bottom: 24px;
+    }
+  
+    .eatery-banner-content {
+      width: 100%;
+      padding: 16px;
+    }
+  
+    .eatery-banner-heading {
+      font-size: 24px;
+    }
+  
+    .eatery-banner-details {
+      flex-direction: column;
+      gap: 8px;
+    }
+  
+    .eatery-menu-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .eatery-review-actions {
+      flex-direction: column;
+      gap: 12px;
+    }
+  
+    .eatery-content-heading {
+      font-size: 24px;
+    }
+  
+    .eatery-content-section {
+      margin-bottom: 40px;
+    }
+  }
+  

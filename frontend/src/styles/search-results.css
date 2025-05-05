@@ -1,0 +1,59 @@
+.search-results-container {
+  position: absolute;
+  padding: 20px;
+  background-color: white;
+  color: black;
+  font-family: Arial, sans-serif;
+  top: 70px;
+  left: 300px;
+}
+
+.menu-item {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  background-color: #f9f9f9;
+  flex-direction: column; /* Align items vertically */
+}
+
+.menu-item img {
+  width: 100%; /* Make image fill the width of the card */
+  height: 200px; /* Fix the height */
+  object-fit: cover; /* Ensure the image covers the space without distortion */
+}
+
+.menu-details {
+  padding: 15px;
+  flex: 1;
+}
+
+.menu-details h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 0;
+  color: black;
+}
+
+.menu-details p {
+  font-size: 14px;
+  color: black;
+  margin-top: 8px;
+}
+
+.add-to-cart-btn {
+  background: #ff6600;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+}
+
+.quantity {
+  margin-left: 5px;
+  margin-right: 5px;
+}

@@ -1,0 +1,305 @@
+/* Root Variables for Signup Theming */
+:root {
+  --signup-box-bg: #0a0e1a; /* Default Dark Blue */
+  --signup-text-color: white;
+  --signup-input-bg: #1c2233;
+  --signup-input-text: white;
+  --signup-button-bg: white;
+  --signup-button-text: #fd7825;
+  --signup-border-color: #333;
+  --signup-accent-color: #fd7825;
+  --signup-link-color: #fd7825;
+  --signup-checkbox-border: #fd7825;
+  --signup-checkbox-fill: #fd7825;
+  --signup-error-color: #ff4d4d;
+  --signup-success-color: #4caf50;
+}
+
+/* Light Theme for Signup Box */
+.signup-light-mode {
+  --signup-box-bg: white;
+  --signup-text-color: black;
+  --signup-input-bg: white;
+  --signup-input-text: black;
+  --signup-button-bg: #fd7825;
+  --signup-button-text: white;
+  --signup-border-color: #ddd;
+}
+
+/* Signup Container */
+/* Signup Container */
+.signup-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw; /* Ensure container takes up the full width */
+  height: 100vh; /* Ensure container takes up the full height */
+  padding: 0;
+  position: relative;
+  background-color: var(--signup-accent-color);
+  overflow: auto; /* Allow scrolling if content exceeds the viewport */
+  box-sizing: border-box; /* Make sure padding doesn't affect the layout */
+}
+
+/* Signup Box */
+.signup-box {
+  display: flex;
+  width: 100%; /* Use full width of the parent */
+  max-width: 1000px; /* Ensure there's a maximum width */
+  height: auto; /* Let the height adjust dynamically */
+  background-color: var(--signup-box-bg);
+  color: var(--signup-text-color);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  box-sizing: border-box; /* Ensure box-sizing doesn't affect layout */
+}
+
+/* Left Section (Form) */
+.signup-form-wrapper {
+  width: 55%; /* Adjusted width */
+  padding: 4% 6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Heading */
+.signup-heading {
+  font-size: 20px; /* Reduced font size */
+  font-weight: 700;
+  margin-bottom: 15px; /* Reduced margin */
+  letter-spacing: 0.5px;
+  color: var(--signup-text-color);
+}
+
+/* Error and Success Messages */
+.signup-error-message {
+  color: var(--signup-error-color);
+  background-color: rgba(255, 77, 77, 0.1);
+  padding: 8px; /* Smaller padding */
+  border-radius: 4px;
+  margin-bottom: 12px; /* Reduced margin */
+  font-size: 12px; /* Smaller font size */
+  text-align: center;
+}
+
+.signup-success {
+  color: var(--signup-success-color);
+  background-color: rgba(76, 175, 80, 0.1);
+  padding: 8px; /* Smaller padding */
+  border-radius: 4px;
+  margin-bottom: 12px; /* Reduced margin */
+  font-size: 12px; /* Smaller font size */
+  text-align: center;
+}
+
+/* Form Element */
+.signup-form-element {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Labels */
+.signup-label {
+  font-size: 12px; /* Reduced font size */
+  font-weight: 500;
+  margin-bottom: 4px; /* Reduced margin */
+  color: var(--signup-text-color);
+}
+
+/* Input fields */
+.signup-input,
+.signup-select {
+  width: 100%;
+  padding: 8px 10px; /* Reduced padding */
+  margin-bottom: 12px; /* Reduced margin */
+  margin-top: 5px;
+  border: 1px solid var(--signup-border-color);
+  border-radius: 6px;
+  background-color: var(--signup-input-bg);
+  color: var(--signup-input-text);
+  font-size: 12px; /* Reduced font size */
+}
+
+.signup-input::placeholder {
+  color: rgba(176, 179, 197, 0.8);
+}
+
+.signup-input:focus,
+.signup-select:focus {
+  outline: none;
+  border-color: var(--signup-accent-color);
+}
+
+/* Checkbox Row */
+.signup-checkbox-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px; /* Reduced margin */
+}
+
+/* Custom Checkbox Styling */
+.signup-custom-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 12px; /* Reduced font size */
+  color: var(--signup-text-color);
+}
+
+.signup-custom-checkbox .signup-checkbox-input {
+  display: none;
+}
+
+.signup-custom-checkbox .signup-checkmark {
+  width: 14px; /* Smaller checkmark size */
+  height: 14px; /* Smaller checkmark size */
+  border: 2px solid var(--signup-checkbox-border);
+  border-radius: 50%;
+  margin-right: 8px; /* Reduced margin */
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.signup-custom-checkbox .signup-checkbox-input:checked + .signup-checkmark::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 6px;
+  height: 6px;
+  background-color: var(--signup-checkbox-fill);
+  border-radius: 50%;
+}
+
+/* Signup Button */
+.signup-btn {
+  width: 100%;
+  max-width: 220px; /* Reduced width */
+  padding: 8px 12px; /* Reduced padding */
+  margin: 16px auto; /* Reduced margin */
+  display: block;
+  background-color: var(--signup-button-bg);
+  color: var(--signup-button-text);
+  font-weight: bold;
+  font-size: 12px; /* Reduced font size */
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.signup-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Right Section (Image) */
+.signup-image-container {
+  width: 45%; /* Reduced width */
+  overflow: hidden;
+}
+
+.signup-image-content {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Login Link */
+.signup-login-link {
+  text-align: center;
+  font-size: 12px; /* Reduced font size */
+  margin-top: 10px;
+  color: var(--signup-text-color);
+}
+
+.signup-link {
+  color: var(--signup-link-color);
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+/* Theme Toggle Button */
+.signup-theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px; /* Smaller toggle button */
+  height: 30px; /* Smaller toggle button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-color: white;
+  color: #fd7825;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  font-size: 14px; /* Smaller font size */
+}
+
+/* Dark mode specific styles for the toggle */
+.signup-container:not(.signup-light-mode) .signup-theme-toggle {
+  background-color: #fd7825;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .signup-box {
+    flex-direction: column;
+    height: auto;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .signup-form-wrapper {
+    width: 100%;
+    padding: 20px 15px;
+  }
+
+  .signup-image-container {
+    display: none;
+  }
+
+  .signup-btn {
+    width: 80%;
+  }
+
+  .signup-theme-toggle {
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 400px) {
+  .signup-box {
+    width: 95%;
+  }
+
+  .signup-heading {
+    font-size: 18px; /* Smaller heading size */
+  }
+
+  .signup-input {
+    padding: 6px 8px; /* Smaller padding */
+  }
+
+  .signup-btn {
+    width: 100%;
+    font-size: 12px; /* Smaller button size */
+  }
+}

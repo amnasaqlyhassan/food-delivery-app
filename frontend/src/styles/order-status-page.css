@@ -1,0 +1,272 @@
+:root {
+    --primary-color: #e84e20;
+    --dark-bg: #050a1c;
+    --light-text: #ffffff;
+}
+/* .status-indicator {
+  width: 50px;
+  height: 50px;
+  border-radius: 999px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+} */
+
+.status-indicator:hover {
+  background-color: #aaa;
+}
+
+.status-indicator.active {
+  background-color: #4CAF50;
+}
+
+
+/* Status indicators */
+.status-indicator {
+    width: 50px;  /* Increased size for better visibility */
+    height: 50px; /* Increased size */
+    border-radius: 50%;
+    background-color: gray;
+    margin-bottom: 15px;  /* Increased space between indicator and label */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Highlighted class for active status indicator */
+.status-item.highlighted .status-indicator {
+    background-color: #4caf50; /* Highlighted color (green) */
+    border-color: #4caf50; /* Same green border for emphasis */
+}
+
+/* Status Icons */
+.status-icon {
+    width: 60px;  /* Increased size for better visibility */
+    height: 60px; /* Increased size */
+    color: white;
+}
+
+/* Status text */
+.status-label {
+    font-size: 18px;  /* Increased font size */
+    margin-top: 8px;  /* Increased space between indicator and text */
+    font-weight: bold;
+}
+
+
+/* Reset some basic elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Full screen container */
+.order-status-container {
+    height: 100vh; /* Full height */
+    width: 100vw;  /* Full width */
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Header */
+.order-header {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    padding: 90px 15px 40px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box; /* Ensures padding doesn't overflow */
+}
+
+.header-title {
+    font-size: 32px;  /* Increased size for better visibility */
+    font-weight: bold;
+}
+
+/* Main Content */
+.order-main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+}
+
+/* Order Card */
+.order-card {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    border-radius: 12px;
+    padding: 60px;  /* Increased padding for larger content */
+    width: 85%;  /* Allows the card to take more screen width */
+    max-width: 1200px;  /* Limits the max width to make it wider */
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Order Details */
+.order-details {
+    margin-bottom: 40px;  /* Increased space between sections */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.detail-row {
+    display: flex;
+    width: 48%;
+    margin-bottom: 15px;  /* Increased margin for better spacing */
+    align-items: center;
+}
+
+.detail-label {
+    font-weight: bold;
+    margin-right: 8px;
+    font-size: 18px;  /* Increased font size */
+}
+
+.detail-value {
+    font-weight: normal;
+    font-size: 18px;  /* Increased font size */
+}
+
+/* Divider */
+.order-divider {
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 40px 0;  /* Increased margin for better spacing */
+    width: 100%;
+}
+
+/* Status Tracker */
+.status-tracker {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;  /* Increased space between sections */
+    width: 100%;
+    position: relative;
+    padding: 0 50px;
+}
+
+/* Connecting line */
+/* Connecting line */
+.status-tracker::before {
+    content: "";
+    position: absolute;
+    top: 15%;  /* Vertically center the line */
+    left: 5%;
+    right: 5%;
+    height: 2px;  /* Line thickness */
+    background-color: rgba(255, 255, 255, 0.5); /* Line color */
+    z-index: 0;
+    transform: translateY(-50%);  /* Offset by 50% of the element's height to center it */
+}
+
+
+/* Individual status items */
+.status-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    flex: 1;
+}
+
+/* Status indicators */
+.status-indicator {
+    width: 50px;  /* Size of the circle */
+    height: 50px;
+    border-radius: 50%;  /* Makes it round */
+    background-color: gray;  /* Default color */
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+
+/* Active status */
+.status-indicator.active {
+    background-color: #1db954;
+}
+
+/* Status text */
+.status-label {
+    font-size: 18px;  /* Increased font size */
+    margin-top: 8px;  /* Increased space between indicator and text */
+    font-weight: bold;
+}
+
+/* Status Icons */
+.status-icon {
+    width: 60px;  /* Increased size for better visibility */
+    height: 60px; /* Increased size */
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .order-card {
+        padding: 30px;  /* Adjusted padding */
+    }
+
+    .status-tracker {
+        flex-wrap: wrap;
+        padding: 0 20px;
+    }
+
+    .status-item {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .status-tracker::before {
+        display: none;
+    }
+
+    .detail-row {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .order-header {
+        padding: 15px 20px;
+    }
+
+    .header-title {
+        font-size: 24px;  /* Increased font size for smaller screens */
+    }
+
+    .detail-row {
+        font-size: 16px;  /* Increased font size */
+    }
+
+    .status-icon {
+        width: 40px;  /* Increased icon size for mobile */
+        height: 40px; /* Increased icon size */
+    }
+
+    .status-label {
+        font-size: 16px;  /* Increased font size */
+    }
+    
+}

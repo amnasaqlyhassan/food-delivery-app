@@ -1,0 +1,162 @@
+body 
+{
+    background-color: orange;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.order-item-his-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.order-item-his:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+body.dark-mode 
+{
+    background-color: #121212;
+}
+
+.hero-header-his 
+{
+    position: relative;
+    background-image: url('food_pic.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 300px;
+    width: 100%; 
+    margin: 500px auto 20px auto; 
+    margin-top: 50px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    overflow: hidden; 
+}
+
+.hero-header-his::before 
+{
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+}
+
+
+body.dark-mode .hero-header-his::before 
+{
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+body.dark-mode .hero-header-his h1 
+{
+    color: #fff; 
+}
+
+.hero-header-his h1 
+{
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+    z-index: 2;
+    position: relative; 
+}
+
+.container-his 
+{
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+body.dark-mode .container-his 
+{
+    color: white;
+}
+
+.order-list-his 
+{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    gap: 20px; 
+}
+
+.order-item-his 
+{
+    background-color: white;
+    width: 48%; 
+    min-width: 280px; 
+    margin: 0; 
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    color: #333;
+    text-align: left; 
+}
+.order-item-his {
+    background-color: white;
+    width: 80%; /* 🔥 increased width */
+    min-width: 280px;
+    margin: 0 auto; /* center the card horizontally */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    color: #333;
+    text-align: left;
+}
+
+
+body.dark-mode .order-item-his 
+{
+    background-color: #333;
+    color: white;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.order-item-his h3 
+{
+    margin: 0;
+    font-size: 24px;
+}
+
+.order-item-his p 
+{
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.order-items-his ul 
+{
+    padding-left: 20px;
+}
+
+.order-items-his li 
+{
+    font-size: 16px;
+}
+
+body.dark-mode .order-items-his li 
+{
+    color: #bbb;
+}
+
+.work{
+    color: black;
+
+    
+}
+.work.dark-mode{
+    color: white;
+}
