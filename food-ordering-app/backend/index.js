@@ -42,6 +42,10 @@ app.use(
 
 app.use(express.json());
 
+//chatbot
+const chatbotRoutes = require('./routes/chatbot');
+app.use('/api/chatbot', chatbotRoutes);
+
 // Attach `io` instance to app so it can be used in routes
 app.set("io", io);
 
