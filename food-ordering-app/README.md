@@ -75,31 +75,6 @@ CampusCravings solves the inefficiency of manual and fragmented food ordering sy
   - Orders
   - Reviews
 
----
-
-## 📂 Project Structure
-
-```
-food-delivery-app/
-│
-├── client/                 # React Frontend
-│   ├── components/
-│   ├── pages/
-│   ├── context/
-│   └── services/
-│
-├── server/                 # Express Backend
-│   ├── models/
-│   ├── routes/
-│   ├── controllers/
-│   ├── middleware/
-│   └── sockets/
-│
-└── README.md
-```
-
----
-
 ## ⚙️ Installation & Setup
 
 ### 1️⃣ Clone Repository
@@ -151,42 +126,3 @@ Frontend runs at:
 ```
 http://localhost:3000
 ```
-
----
-
-## 📌 Use Case Coverage
-
-The system supports:
-
-- User registration & authentication  
-- Browse & filter eateries  
-- Order placement & checkout  
-- Real-time order tracking  
-- Menu & order management (Eatery dashboard)  
-- Ratings & feedback system  
-- AI-powered chatbot recommendations  
-
----
-
-## 📈 Key Engineering Decisions
-
-- Designed scalable REST endpoints for efficient order handling
-- Implemented real-time updates using WebSockets
-- Optimized frontend re-render cycles via controlled state management
-- Maintained clean separation between controller, route, and model layers
-- Structured MongoDB relations for consistent data integrity
-
----
-
-## 🔮 Future Improvements
-
-- Payment gateway integration
-- Admin analytics dashboard
-- Deployment (AWS / Docker)
-- Unit & integration testing
-- Advanced recommendation algorithm
-- Performance optimization & caching
-
----
-
-⭐ If you found this project interesting, consider giving it a star!
