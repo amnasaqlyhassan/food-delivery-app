@@ -7,15 +7,6 @@ The platform supports authentication, menu management, order placement, real-tim
 
 ---
 
-## 👥 Group Project Context & Individual Contributions
-
-This project was built as a collaborative group project for a university course. 
-
-### 🛠️ My Role & Specific Contributions
-* **Backend Development & DB Architecture:** Designed and implemented MongoDB schemas, managed database updates, and developed RESTful API endpoints for system data.
-* **Add to Cart & Order Workflow:** Built full-stack functionality for cart state management, checkout logic, and frontend-to-backend API integration.
-* **Specialized Filtering System:** Developed custom backend query logic and dynamic frontend filters to organize menu items.
-* **AI Recommendation Bot:** Integrated the backend API endpoints and frontend interaction for the AI-powered chatbot assistant.
 
 ---
 
