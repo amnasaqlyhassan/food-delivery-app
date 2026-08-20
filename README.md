@@ -19,8 +19,6 @@ This project was built as a collaborative group project for a university course.
 
 ---
 
----
-
 ## 🚀 Overview
 
 CampusCravings solves the inefficiency of manual and fragmented food ordering systems within campus environments by providing:
